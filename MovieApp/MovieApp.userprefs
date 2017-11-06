@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{629F4302-C92E-46A3-846B-63DCE0DD63DB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MovieApp/Model/Constants.cs">
     <Files>
-      <File FileName="MovieApp/App.xaml.cs" Line="21" Column="1" />
-      <File FileName="MovieApp/Model/Token.cs" Line="22" Column="2" />
-      <File FileName="MovieApp/Data/RestService.cs" Line="101" Column="10" />
-      <File FileName="MovieApp/View/LoginPage.xaml.cs" Line="18" Column="1" />
-      <File FileName="MovieApp/obj/Debug/MovieApp.View.LoginPage.xaml.g.cs" Line="49" Column="1" />
-      <File FileName="iOS/AppDelegate.cs" Line="17" Column="1" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="MovieApp/View/LoginPage.xaml.cs" Line="35" Column="40" />
+      <File FileName="MovieApp/View/Menu/Dashboard.xaml" Line="9" Column="24" />
+      <File FileName="MovieApp/View/Menu/Dashboard.xaml.cs" Line="29" Column="6" />
+      <File FileName="MovieApp/View/DetailView/InforScreen1.xaml" Line="5" Column="27" />
+      <File FileName="MovieApp/View/DetailView/InforScreen1.xaml.cs" Line="1" Column="1" />
+      <File FileName="MovieApp/obj/Debug/MovieApp.View.LoginPage.xaml.g.cs" Line="49" Column="82" />
+      <File FileName="MovieApp/View/LoginPage.xaml" Line="23" Column="78" />
+      <File FileName="MovieApp/Model/Constants.cs" Line="18" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

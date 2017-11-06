@@ -36,6 +36,14 @@
     <EmbeddedResource Include="View\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DetailView\InforScreen1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -58,11 +66,19 @@
     <Compile Include="Data\UserDatabaseController.cs" />
     <Compile Include="Data\TokenDatabaseController.cs" />
     <Compile Include="Data\RestService.cs" />
+    <Compile Include="View\Menu\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DetailView\InforScreen1.xaml.cs">
+      <DependentUpon>InforScreen1.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
     <Folder Include="Model\" />
     <Folder Include="Data\" />
+    <Folder Include="View\Menu\" />
+    <Folder Include="View\DetailView\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

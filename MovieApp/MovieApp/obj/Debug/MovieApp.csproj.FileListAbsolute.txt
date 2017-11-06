@@ -50,3 +50,5 @@
 /Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.LoginPage.xaml.g.cs
 /Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.dll
 /Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.pdb
+/Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.Menu.Dashboard.xaml.g.cs
+/Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.DetailView.InforScreen1.xaml.g.cs

@@ -8,6 +8,7 @@ using MovieApp.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
+using MovieApp.View.Menu;
 
 namespace MovieApp.View
 {
@@ -37,10 +38,21 @@ namespace MovieApp.View
             if (user.CheckInformation())
             {         
                 await DisplayAlert("Login", "Login Success", "Okie");
-                var result = await App.RestService.Login(user);
+                //var result = await App.RestService.Login(user);
+                var result = new Token();
                 if(result != null)
                 {
                     App.UserDatabase.SaveUser(user);
+                    App.TokenDatabase.SaveToken(result);
+                    if(Device.RuntimePlatform == Device.Android)
+                    {
+                        Application.Current.MainPage = new NavigationPage(new Dashboard());
+                    }
+                    else if(Device.RuntimePlatform == Device.iOS)
+                    {
+                        await Navigation.PushAsync(new NavigationPage(new Dashboard()));
+
+                    }
                 }
             }
             else

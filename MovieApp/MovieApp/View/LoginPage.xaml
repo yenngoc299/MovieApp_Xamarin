@@ -20,7 +20,7 @@
             <Entry x:Name ="Entry_Username" Placeholder = "Username"/>
             <Label x:Name ="Lbl_Password" Text="Password"/>
             <Entry x:Name ="Entry_Password" Placeholder = "Password"/>
-            <Button x:Name="Btn_Signin" Text ="Login" Clicked="SignInProcedure"/>
+            <Button x:Name="Btn_Signin" Text ="Login" Clicked="SignInProcedureAsync"/>
         </StackLayout>
 
 
