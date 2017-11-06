@@ -12,6 +12,8 @@ namespace MovieApp
 
         static TokenDatabaseController tokenDatabase;
         static UserDatabaseController userDatabase;
+        static RestService restService;
+
         public App()
         {
             InitializeComponent();
@@ -51,12 +53,12 @@ namespace MovieApp
         {
             get
             {
-                if(tokenDatabase == null)
+                if(TokenDatabase == null)
                 {
                     userDatabase = new UserDatabaseController();
 
                 }
-                return tokenDatabase;
+                return TokenDatabase;
             }
 
         }
@@ -65,12 +67,14 @@ namespace MovieApp
         {
             get
             {
-                if(RestService == null)
+                if(restService == null)
                 {
-                    RestService = new RestService();
+                    restService = new RestService();
                 }
-                return RestService;
+                return restService;
             }
         }
+
+        public static TokenDatabaseController TokenDatabase { get => tokenDatabase; set => tokenDatabase = value; }
     }
 }

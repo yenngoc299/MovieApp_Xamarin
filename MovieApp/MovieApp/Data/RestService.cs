@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using System.Net.Http;
 using MovieApp.Model;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace MovieApp.Data
 {
@@ -18,9 +19,11 @@ namespace MovieApp.Data
             
         public RestService()
         {
-            client = new HttpClient();
-            client.MaxResponseContentBufferSize = 256000;
-            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
+            client = new HttpClient
+            {
+                MaxResponseContentBufferSize = 256000
+            };
+            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded' "));
         }
 
         public async Task<Token>Login(User user)
@@ -28,12 +31,12 @@ namespace MovieApp.Data
             var postData = new List<KeyValuePair<string, string>>();
             postData.Add(new KeyValuePair<string, string>("grant_type",grant_type));
             postData.Add(new KeyValuePair<string, string>("username",user.Username));
-            postData.Add(new KeyValuePair<string, string>("password",user.Password));
+            postData.Add(new KeyValuePair<string, string>("password",user.Password));         
             var content = new FormUrlEncodedContent(postData);
             var response = await PostResponseLogin<Token>(Constants.LoginUrl, content);
             DateTime dt = new DateTime();
             dt = DateTime.Today;
-            response.exprire_date = dt.AddSeconds(response.expire_in);
+            response.Exprire_date = dt.AddSeconds(response.Expire_in);
             return response;
         }
 
@@ -49,7 +52,7 @@ namespace MovieApp.Data
         {
             var Token = App.TokenUserDatabase.GetToken();
             string ContentType = "application/json";
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.access_token);
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.Access_token);
             try
             {
                 var Result = await client.PostAsync(weburl, new StringContent(jsonstring, Encoding.UTF8, ContentType));
@@ -59,7 +62,6 @@ namespace MovieApp.Data
                     try
                     {
                         var ContentResp = JsonConvert.DeserializeObject<T>(JsonResult);
-
                         return ContentResp;
                     }
                     catch { return null; }
@@ -72,12 +74,31 @@ namespace MovieApp.Data
         public async Task<T> GetResponse<T>(string weburl) where T:class
         {
             var Token = App.TokenUserDatabase.GetToken();
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.access_token);
-            var response = await client.GetAsync(weburl);
-            var JsonResult = response.Content.ReadAsStringAsync().Result;
-            var ContentResp = JsonConvert.DeserializeObject<T>(JsonResult);
-            return ContentResp;
-
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.Access_token);
+            try
+            {
+                var response = await client.GetAsync(weburl);
+                if(response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var JsonResult = response.Content.ReadAsStringAsync().Result;
+                    Debug.WriteLine("JsonResult:" + JsonResult);
+                    try
+                    {
+                        var ContentResp = JsonConvert.DeserializeObject<T>(JsonResult);
+                        return ContentResp;
+                    }
+                    catch
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
         }
     }
+
 }

@@ -26,22 +26,26 @@ namespace MovieApp.View
             Lbl_Password.TextColor = Constants.MainTextColor;
             ActivitySpinner.IsVisible = false;
             LoginIcon.HeightRequest = Constants.LoginIconHeigh;
+
             Entry_Username.Completed += (sender, e) => Entry_Password.Focus();
             Entry_Password.Completed += (sender, e) => SignInProcedureAsync(sender, e);
         }
 
-        async Task SignInProcedureAsync(object seder, EventArgs e)
+        async void SignInProcedureAsync(object seder, EventArgs e)
         {
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckInformation())
-            { 
-                DisplayAlert("Login", "Login Success", "Okie");
+            {         
+                await DisplayAlert("Login", "Login Success", "Okie");
                 var result = await App.RestService.Login(user);
-                App.UserDatabase.SaveUser(user);
+                if(result != null)
+                {
+                    App.UserDatabase.SaveUser(user);
+                }
             }
             else
             {
-                DisplayAlert("Login", "Login Not Correct", "Empty user name or password", "Okie");
+                await DisplayAlert("Login", "Login Not Correct", "Empty user name or password", "Okie");
             }
         }
     }
