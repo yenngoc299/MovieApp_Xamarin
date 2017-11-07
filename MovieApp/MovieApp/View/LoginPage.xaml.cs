@@ -46,11 +46,11 @@ namespace MovieApp.View
                     App.TokenDatabase.SaveToken(result);
                     if(Device.RuntimePlatform == Device.Android)
                     {
-                        Application.Current.MainPage = new NavigationPage(new Dashboard());
+                        Application.Current.MainPage = new NavigationPage(new MasterDetail());
                     }
                     else if(Device.RuntimePlatform == Device.iOS)
                     {
-                        await Navigation.PushAsync(new NavigationPage(new Dashboard()));
+                        await Navigation.PushAsync(new NavigationPage(new MasterDetail()));
 
                     }
                 }

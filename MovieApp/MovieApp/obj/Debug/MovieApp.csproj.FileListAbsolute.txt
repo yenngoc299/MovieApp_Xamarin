@@ -53,3 +53,5 @@
 /Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.Menu.Dashboard.xaml.g.cs
 /Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.DetailView.InforScreen1.xaml.g.cs
 /Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.Menu.MasterDetail.xaml.g.cs
+/Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.Menu.Masterpage.xaml.g.cs
+/Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/obj/Debug/MovieApp.View.DetailView.InforScreen2.xaml.g.cs

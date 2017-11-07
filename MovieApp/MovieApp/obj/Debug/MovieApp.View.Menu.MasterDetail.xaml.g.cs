@@ -16,12 +16,12 @@ namespace MovieApp.View.Menu {
     public partial class MasterDetail : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::MovieApp.Views.Menu.MasterPage masterPage;
+        private global::MovieApp.View.Menu.Masterpage masterpage;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MasterDetail));
-            masterPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MovieApp.Views.Menu.MasterPage>(this, "masterPage");
+            masterpage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MovieApp.View.Menu.Masterpage>(this, "masterpage");
         }
     }
 }

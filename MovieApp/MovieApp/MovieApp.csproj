@@ -48,6 +48,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DetailView\InforScreen2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -78,6 +82,10 @@
     </Compile>
     <Compile Include="View\Menu\Masterpage.xaml.cs">
       <DependentUpon>Masterpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MasterMenuItem.cs" />
+    <Compile Include="View\DetailView\InforScreen2.xaml.cs">
+      <DependentUpon>InforScreen2.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

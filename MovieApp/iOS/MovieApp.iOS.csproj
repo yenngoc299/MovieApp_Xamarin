@@ -138,6 +138,7 @@
     <Compile Include="Data\SQLite_IOS.cs" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\LoginIcon.png" />
     <BundleResource Include="Resources\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
