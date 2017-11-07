@@ -36,11 +36,15 @@
     <EmbeddedResource Include="View\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Menu\Dashboard.xaml">
+    <EmbeddedResource Include="View\DetailView\InforScreen1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\DetailView\InforScreen1.xaml">
+    <EmbeddedResource Include="View\Menu\MasterDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\Masterpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -66,11 +70,14 @@
     <Compile Include="Data\UserDatabaseController.cs" />
     <Compile Include="Data\TokenDatabaseController.cs" />
     <Compile Include="Data\RestService.cs" />
-    <Compile Include="View\Menu\Dashboard.xaml.cs">
-      <DependentUpon>Dashboard.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\DetailView\InforScreen1.xaml.cs">
       <DependentUpon>InforScreen1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\MasterDetail.xaml.cs">
+      <DependentUpon>MasterDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\Masterpage.xaml.cs">
+      <DependentUpon>Masterpage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

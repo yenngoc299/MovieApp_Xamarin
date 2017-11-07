@@ -1,21 +1,15 @@
 ﻿<Properties StartupConfiguration="{629F4302-C92E-46A3-846B-63DCE0DD63DB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MovieApp/Model/Constants.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MovieApp/View/Menu/Masterpage.xaml.cs">
     <Files>
-      <File FileName="MovieApp/View/LoginPage.xaml.cs" Line="35" Column="40" />
-      <File FileName="MovieApp/View/Menu/Dashboard.xaml" Line="9" Column="24" />
-      <File FileName="MovieApp/View/Menu/Dashboard.xaml.cs" Line="29" Column="6" />
-      <File FileName="MovieApp/View/DetailView/InforScreen1.xaml" Line="5" Column="27" />
-      <File FileName="MovieApp/View/DetailView/InforScreen1.xaml.cs" Line="1" Column="1" />
-      <File FileName="MovieApp/obj/Debug/MovieApp.View.LoginPage.xaml.g.cs" Line="49" Column="82" />
-      <File FileName="MovieApp/View/LoginPage.xaml" Line="23" Column="78" />
-      <File FileName="MovieApp/Model/Constants.cs" Line="18" Column="9" />
+      <File FileName="MovieApp/View/Menu/MasterDetail.xaml" Line="9" Column="26" />
+      <File FileName="MovieApp/View/Menu/MasterDetail.xaml.cs" Line="11" Column="54" />
+      <File FileName="MovieApp/Model/Page1.xaml" Line="7" Column="1" />
+      <File FileName="MovieApp/View/Menu/Masterpage.xaml" Line="6" Column="1" />
+      <File FileName="MovieApp/View/Menu/Masterpage.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.MovieApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.253A3E59-A3B1-4B18-8C44-2DD40A2A3F4A">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam />
-  </MonoDevelop.Ide.ItemProperties.MovieApp.iOS>
-  <MonoDevelop.Ide.ItemProperties.MovieApp.Droid PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.MovieApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.253A3E59-A3B1-4B18-8C44-2DD40A2A3F4A" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

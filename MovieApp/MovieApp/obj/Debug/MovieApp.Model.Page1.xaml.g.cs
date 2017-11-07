@@ -11,7 +11,7 @@
 namespace MovieApp.Model {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/macmini/Projects/MovieApp/MovieApp/Model/Page1.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/macmini/Documents/git/MovieApp_Xamarin/MovieApp/MovieApp/Model/Page1.xaml")]
     public partial class Page1 : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

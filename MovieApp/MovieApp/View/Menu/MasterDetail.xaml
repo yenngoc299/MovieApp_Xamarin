@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:MovieApp.Views.Menu;assembly=MovieApp"
+    xmlns:detailviews="clr-namespace:MovieApp.Views.DetailViews;assembly=MovieApp"
+    x:Class="MovieApp.View.Menu.MasterDetail">
+    <MasterDetailPage.Master>
+        <Local:MasterPage x:Name = "InfoScreen1"/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:ContactsPage />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
+
+   
